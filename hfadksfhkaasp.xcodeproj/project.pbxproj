@@ -10,10 +10,26 @@
 		96C1B89BA633588F3C3FDFE5 /* Pods_hfadksfhkaasp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECEF06A90621AA057777EC0 /* Pods_hfadksfhkaasp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		74BA51002E9E5B3400FC899E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4BAA355F7173BB25FD65CA19 /* Pods-hfadksfhkaaspq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hfadksfhkaaspq.release.xcconfig"; path = "Target Support Files/Pods-hfadksfhkaaspq/Pods-hfadksfhkaaspq.release.xcconfig"; sourceTree = "<group>"; };
+		4F3D0211EA3288D2A8632ACB /* Pods-hfadksfhkaaspq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hfadksfhkaaspq.debug.xcconfig"; path = "Target Support Files/Pods-hfadksfhkaaspq/Pods-hfadksfhkaaspq.debug.xcconfig"; sourceTree = "<group>"; };
 		74613CEC2E9AABDF002B684D /* hfadksfhkaasp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hfadksfhkaasp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C6808DDB80E3F40CF7C76F /* Pods-hfadksfhkaasp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hfadksfhkaasp.release.xcconfig"; path = "Target Support Files/Pods-hfadksfhkaasp/Pods-hfadksfhkaasp.release.xcconfig"; sourceTree = "<group>"; };
 		DCBD8CC8C000CE5F82B4C474 /* Pods-hfadksfhkaasp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hfadksfhkaasp.debug.xcconfig"; path = "Target Support Files/Pods-hfadksfhkaasp/Pods-hfadksfhkaasp.debug.xcconfig"; sourceTree = "<group>"; };
+		DE487B630FCE2059C333D1A4 /* Pods_hfadksfhkaaspq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hfadksfhkaaspq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECEF06A90621AA057777EC0 /* Pods_hfadksfhkaasp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hfadksfhkaasp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,6 +71,8 @@
 			children = (
 				DCBD8CC8C000CE5F82B4C474 /* Pods-hfadksfhkaasp.debug.xcconfig */,
 				97C6808DDB80E3F40CF7C76F /* Pods-hfadksfhkaasp.release.xcconfig */,
+				4F3D0211EA3288D2A8632ACB /* Pods-hfadksfhkaaspq.debug.xcconfig */,
+				4BAA355F7173BB25FD65CA19 /* Pods-hfadksfhkaaspq.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -81,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				FECEF06A90621AA057777EC0 /* Pods_hfadksfhkaasp.framework */,
+				DE487B630FCE2059C333D1A4 /* Pods_hfadksfhkaaspq.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,7 +116,7 @@
 				74613CE92E9AABDF002B684D /* Frameworks */,
 				74613CEA2E9AABDF002B684D /* Resources */,
 				12BF0ABC3E4E382CBC844376 /* [CP] Embed Pods Frameworks */,
-				2606414B2406ABE8237D72AD /* [CP] Copy Pods Resources */,
+				74BA51002E9E5B3400FC899E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,23 +192,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hfadksfhkaasp/Pods-hfadksfhkaasp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2606414B2406ABE8237D72AD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hfadksfhkaasp/Pods-hfadksfhkaasp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hfadksfhkaasp/Pods-hfadksfhkaasp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hfadksfhkaasp/Pods-hfadksfhkaasp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		98B591096D4017D78D410AB6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,8 +233,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S3JTTY22JT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hfadksfhkaasp/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -259,8 +263,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S3JTTY22JT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = hfadksfhkaasp/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
@@ -286,6 +292,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -349,6 +356,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
