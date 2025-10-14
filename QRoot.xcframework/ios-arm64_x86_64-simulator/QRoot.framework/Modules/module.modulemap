@@ -1,0 +1,6 @@
+framework module QRoot {
+  umbrella header "QRoot.h"
+  export *
+
+  module * { export * }
+}
