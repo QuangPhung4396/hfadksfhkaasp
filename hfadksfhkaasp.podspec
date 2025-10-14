@@ -13,12 +13,11 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, '15.0'
   spec.source_files = 'hfadksfhkaasp/**/*.swift'
   spec.swift_version = '5.0'
-  spec.static_framework   = true
-  spec.pod_target_xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
 
-  spec.dependency 'SwiftSoup', '~> 2.7.3'
-  spec.dependency 'CryptoSwift', '~> 1.8.4'
-  spec.dependency 'Kingfisher', '~> 7.12.0'
-  spec.dependency 'SnapKit', '~> 5.7.1'
-
+  spec.dependency 'SwiftSoup'
+  spec.dependency 'CryptoSwift'
+  spec.dependency 'Kingfisher'
+  spec.dependency 'SnapKit'
+  spec.dependency 'Google-Mobile-Ads-SDK'
+  spec.vendored_frameworks = 'QRoot.xcframework'
 end
