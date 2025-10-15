@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "hfadksfhkaasp"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "First version"
   spec.description  = <<-DESC
                     A more detailed description of hfadksfhkaasp.
