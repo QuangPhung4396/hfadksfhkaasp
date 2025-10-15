@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "hfadksfhkaasp"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "First version"
   spec.description  = <<-DESC
                     A more detailed description of hfadksfhkaasp.
@@ -9,9 +9,8 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/QuangPhung4396/hfadksfhkaasp'
   spec.license   = { :type => 'MIT', :file => 'LICENSE' }
   spec.author    = { "QuangPhung4396" => "quang.phungvan1996@gmail.com" }
-  spec.source    = { :git => "https://github.com/QuangPhung4396/hfadksfhkaasp.git", :tag => "0.0.2" }
+  spec.source    = { :git => "https://github.com/QuangPhung4396/hfadksfhkaasp.git", :tag => spec.version.to_s }
   spec.platform     = :ios, '15.0'
-  spec.source_files = 'hfadksfhkaasp/**/*.swift'
   spec.swift_version = '5.0'
 
   spec.dependency 'SwiftSoup'
