@@ -106,48 +106,92 @@
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		OBqU7MTj3mtyGnHuhIhzYdxrh4M=
+		HlW7e3YiBbyumN+gWW2WW5Qi9e8=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		pDyQ1YHifRIc1OB5juNlReKMlSs=
+		OuK6Ov91paCqcGtkLhJi3cMj/YQ=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		k+29RHMkJS1+eTvliSQO+kVAIww=
+		CjMuqV/Wbe0SZyhbPlFxuTJnbMc=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		pDyQ1YHifRIc1OB5juNlReKMlSs=
+		OuK6Ov91paCqcGtkLhJi3cMj/YQ=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rQuLNgfxg+eTc1ksBbKjX4SpDHs=
+		jeSXfCa0p2acklqaDwwhjbpDmgE=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		OBqU7MTj3mtyGnHuhIhzYdxrh4M=
+		HlW7e3YiBbyumN+gWW2WW5Qi9e8=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		d2YRPz02zrY5ByjCvPEdejPuGDQ=
+		0RdqBtIe+hQyyi8X9MThKnZHS6A=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		IYqjrWt045Vj8HKXxUKzWPhqEoA=
+		NkC/VupGbnVjyW70CoxtvGMvPH8=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		d2YRPz02zrY5ByjCvPEdejPuGDQ=
+		0RdqBtIe+hQyyi8X9MThKnZHS6A=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		nNzjaBfH8MwMPIaNcQZ8BNW53Xk=
+		cc3Pg4iB6tai4r2uhYvEAxSxung=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		c8/peUOZEksUlCB8jbQWyvN3VIk=
 		</data>
+		<key>NormalFooter.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hjUAn2WbNLIp+uOA6B5j32QWAck=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>NormalFooter.bundle/zh.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pBdD0wO7FYu+Y7KEg8K6Y3Lnwd4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>NormalHeader.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eEV06/g64wlYWY/qSiykH1rTjjM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>NormalHeader.bundle/images/refresh_arrow@2x.png</key>
+		<data>
+		QAXOuzionWdZlBAgTLf2ac5HSpM=
+		</data>
+		<key>NormalHeader.bundle/images/refresh_arrow@3x.png</key>
+		<data>
+		QAXOuzionWdZlBAgTLf2ac5HSpM=
+		</data>
+		<key>NormalHeader.bundle/zh.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FeJjJZ7VYc1/qdZ9HCF/FkZ5LX4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>QFindVC.nib</key>
 		<data>
 		CURvRDlTu3XKrMkq9tkhyGlf/ig=
@@ -360,70 +404,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			h/u6VxxDpTH/0x6xlWMWB5+zykyjGWPuCkSyIagDoFM=
+			3UXDz+5CXIRj01Abng3srimNvZEJ/mON5Y75lB1zKnE=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+M6EsFNmdRSENlBvYmgymlPRKlPRDDhSWthetOpK44c=
+			bFHb/5/DQNAG36RZv+Cf1kg1XRvfKL2X/fbYX9EEupw=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			117wRYdEh/Fe5KQZuC5TD3Xs2fqY/IkFJcaz6E1t9OA=
+			I7Y2MHI0pn3sW4f7QbNlriERokHz2T33deF+6WJMco4=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+M6EsFNmdRSENlBvYmgymlPRKlPRDDhSWthetOpK44c=
+			bFHb/5/DQNAG36RZv+Cf1kg1XRvfKL2X/fbYX9EEupw=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/hndyeSignKmWWHSkjM/a+QBavALERRgvq5bHhDHTTQ=
+			fKCRNZt2Ur8oISa9y8n1WH7Rc5KDQ5oUmo5zvC6ZiI0=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h/u6VxxDpTH/0x6xlWMWB5+zykyjGWPuCkSyIagDoFM=
+			3UXDz+5CXIRj01Abng3srimNvZEJ/mON5Y75lB1zKnE=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oL/Epo3aUFrZ6vGAnqTugQ7iqqAQ+Htv7xBF1VPu5EQ=
+			A34yd6SEuiAn7gHASvkEZ5cmmX45MmUKzZmTH6nkd5Q=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4dpF5eU9SXMIRso9EO0HtqqKSevbSSbFCiuB+2m4mw8=
+			e+bAWn4Rb0xYh4WshNiEVNd4VavkumJ44l8L+RFC3hA=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oL/Epo3aUFrZ6vGAnqTugQ7iqqAQ+Htv7xBF1VPu5EQ=
+			A34yd6SEuiAn7gHASvkEZ5cmmX45MmUKzZmTH6nkd5Q=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FvQFEyhndZq/MpOBNYPNCMEUQ0vUeUMxiutuUORdLDs=
+			1wesA4S8+znlt9W9wF0oyLjXck23/EI9Ebh+Vl9aW30=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -432,6 +476,56 @@
 			<data>
 			WjXfjx8J+ubnD3SqF9AeCpENgYa9z7gmUpKYr4OBMKs=
 			</data>
+		</dict>
+		<key>NormalFooter.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hTN0XqizNlXFXA4AabffmiJevDZsRVw5/zYuiQtGysw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>NormalFooter.bundle/zh.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/Ao3GwWBCivqqJcykjUh+EWmQx5Qe3KU2kUt45b5tbo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>NormalHeader.bundle/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IgnmzFx9DLJgKCG8EoUi+AzyY+MSuEGhnKfPKYwO+LQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>NormalHeader.bundle/images/refresh_arrow@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i0Pg5Zh7rY3JQTQgPTHczFq18az8k2zzMxpigDN+HT8=
+			</data>
+		</dict>
+		<key>NormalHeader.bundle/images/refresh_arrow@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i0Pg5Zh7rY3JQTQgPTHczFq18az8k2zzMxpigDN+HT8=
+			</data>
+		</dict>
+		<key>NormalHeader.bundle/zh.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oBTC6lOLDMCmJ+tGp+KcxadAs8y4GifSeQ01mP8F2t0=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 		<key>QFindVC.nib</key>
 		<dict>

@@ -3,7 +3,6 @@
 // swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name QRoot
 import AVFoundation
 import AVKit
-import CRRefresh
 import CommonCrypto
 import CryptoKit
 import CryptoSwift
@@ -183,6 +182,252 @@ extension QRoot.ExpandableLabel {
 }
 extension UIKit.UILabel {
   @_Concurrency.MainActor @preconcurrency open func check(touch: UIKit.UITouch, isInRange targetRange: Foundation.NSRange) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency open class FastAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
+  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func refreshWillEnd(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect, color: UIKit.UIColor = .init(rgb: (214, 214, 214)), arrowColor: UIKit.UIColor = .init(rgb: (165, 165, 165)), lineWidth: CoreFoundation.CGFloat = 1)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class NormalFooterAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
+  @_Concurrency.MainActor @preconcurrency open var loadingMoreDescription: Swift.String?
+  @_Concurrency.MainActor @preconcurrency open var noMoreDataDescription: Swift.String?
+  @_Concurrency.MainActor @preconcurrency open var loadingDescription: Swift.String?
+  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var duration: Swift.Double
+  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency public func refreshWillEnd(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class NormalHeaderAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
+  @_Concurrency.MainActor @preconcurrency open var pullToRefreshDescription: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var releaseToRefreshDescription: Swift.String?
+  @_Concurrency.MainActor @preconcurrency open var loadingDescription: Swift.String?
+  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var hold: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func refreshWillEnd(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class RamotionAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
+  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public init(ballColor: UIKit.UIColor = .white, waveColor: UIKit.UIColor = .init(rgb: (140, 141, 178)))
+  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
+  @_Concurrency.MainActor @preconcurrency open func refreshWillEnd(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency open class SlackLoadingAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
+  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
+  @_Concurrency.MainActor @preconcurrency open func refreshWillEnd(view: QRoot.CRRefreshComponent)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @objc deinit
+}
+open class CRRefreshAnimator : QRoot.CRRefreshProtocol {
+  open var view: UIKit.UIView
+  open var insets: UIKit.UIEdgeInsets
+  open var trigger: CoreFoundation.CGFloat
+  open var execute: CoreFoundation.CGFloat
+  open var endDelay: CoreFoundation.CGFloat
+  public var hold: CoreFoundation.CGFloat
+  public init()
+  open func refreshBegin(view: QRoot.CRRefreshComponent)
+  open func refreshWillEnd(view: QRoot.CRRefreshComponent)
+  open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
+  open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
+  open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
+  @objc deinit
+}
+public typealias CRRefreshHandler = (() -> ())
+public enum CRRefreshState {
+  case idle
+  case pulling
+  case refreshing
+  case willRefresh
+  case noMoreData
+  public static func == (a: QRoot.CRRefreshState, b: QRoot.CRRefreshState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CRRefreshComponent : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency weak open var scrollView: UIKit.UIScrollView?
+  @_Concurrency.MainActor @preconcurrency open var scrollViewInsets: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor @preconcurrency open var handler: QRoot.CRRefreshHandler?
+  @_Concurrency.MainActor @preconcurrency open var animator: (any QRoot.CRRefreshProtocol)!
+  @_Concurrency.MainActor @preconcurrency open var state: QRoot.CRRefreshState {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency convenience public init(animator: any QRoot.CRRefreshProtocol = CRRefreshAnimator(), handler: @escaping QRoot.CRRefreshHandler)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didMoveToSuperview()
+  @_Concurrency.MainActor @preconcurrency final public func beginRefreshing()
+  @_Concurrency.MainActor @preconcurrency final public func endRefreshing()
+  @_Concurrency.MainActor @preconcurrency public func ignoreObserver(_ ignore: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func start()
+  @_Concurrency.MainActor @preconcurrency public func stop()
+  @_Concurrency.MainActor @preconcurrency public func sizeChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
+  @_Concurrency.MainActor @preconcurrency public func offsetChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
+  @objc deinit
+}
+extension QRoot.CRRefreshComponent {
+  @_Concurrency.MainActor @preconcurrency public static let animationDuration: Swift.Double
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+}
+public typealias CRRefreshView = UIKit.UIScrollView
+extension UIKit.UIScrollView {
+  @_Concurrency.MainActor @preconcurrency public var cr: QRoot.CRRefreshDSL {
+    get
+  }
+}
+public struct CRRefreshDSL : QRoot.CRRefreshViewProtocol {
+  public var scroll: QRoot.CRRefreshView
+  @discardableResult
+  public func addHeadRefresh(animator: any QRoot.CRRefreshProtocol = NormalHeaderAnimator(), handler: @escaping QRoot.CRRefreshHandler) -> QRoot.CRRefreshHeaderView
+  public func beginHeaderRefresh()
+  public func endHeaderRefresh()
+  public func removeHeader()
+  @discardableResult
+  public func addFootRefresh(animator: any QRoot.CRRefreshProtocol = NormalFooterAnimator(), handler: @escaping QRoot.CRRefreshHandler) -> QRoot.CRRefreshFooterView
+  public func noticeNoMoreData()
+  public func resetNoMore()
+  public func endLoadingMore()
+  public func removeFooter()
+}
+public struct CRRefreshMake : QRoot.CRRefreshViewProtocol {
+  public var scroll: QRoot.CRRefreshView
+  public mutating func removeHeader()
+  public mutating func removeFooter()
+}
+public protocol CRRefreshViewProtocol {
+  var scroll: QRoot.CRRefreshView { get set }
+  var header: QRoot.CRRefreshHeaderView? { get set }
+  var footer: QRoot.CRRefreshFooterView? { get set }
+}
+extension QRoot.CRRefreshViewProtocol {
+  public var header: QRoot.CRRefreshHeaderView? {
+    get
+    set
+  }
+  public var footer: QRoot.CRRefreshFooterView? {
+    get
+    set
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CRRefreshFooterView : QRoot.CRRefreshComponent {
+  @_Concurrency.MainActor @preconcurrency open var noMoreData: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isHidden: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency convenience public init(animator: any QRoot.CRRefreshProtocol = NormalFooterAnimator(), handler: @escaping QRoot.CRRefreshHandler)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didMoveToSuperview()
+  @_Concurrency.MainActor @preconcurrency override open func start()
+  @_Concurrency.MainActor @preconcurrency override open func stop()
+  @_Concurrency.MainActor @preconcurrency override open func sizeChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
+  @_Concurrency.MainActor @preconcurrency override open func offsetChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
+  @_Concurrency.MainActor @preconcurrency open func noticeNoMoreData()
+  @_Concurrency.MainActor @preconcurrency open func resetNoMoreData()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CRRefreshHeaderView : QRoot.CRRefreshComponent {
+  @_Concurrency.MainActor @preconcurrency convenience public init(animator: any QRoot.CRRefreshProtocol = NormalHeaderAnimator(), handler: @escaping QRoot.CRRefreshHandler)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didMoveToSuperview()
+  @_Concurrency.MainActor @preconcurrency override open func start()
+  @_Concurrency.MainActor @preconcurrency override open func stop()
+  @_Concurrency.MainActor @preconcurrency override open func offsetChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol CRRefreshProtocol {
+  var view: UIKit.UIView { get }
+  var insets: UIKit.UIEdgeInsets { get set }
+  var trigger: CoreFoundation.CGFloat { get set }
+  var execute: CoreFoundation.CGFloat { get set }
+  var endDelay: CoreFoundation.CGFloat { get set }
+  var hold: CoreFoundation.CGFloat { get set }
+  mutating func refreshBegin(view: QRoot.CRRefreshComponent)
+  mutating func refreshWillEnd(view: QRoot.CRRefreshComponent)
+  mutating func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
+  mutating func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
+  mutating func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
+}
+extension UIKit.UIColor {
+  convenience public init(rgb: (r: CoreFoundation.CGFloat, g: CoreFoundation.CGFloat, b: CoreFoundation.CGFloat))
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class FSPageControl : UIKit.UIControl {
   @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var numberOfPages: Swift.Int {
@@ -486,6 +731,8 @@ extension QRoot.MediaType : Swift.Hashable {}
 extension QRoot.MediaType : Swift.RawRepresentable {}
 extension QRoot.ExpandableLabel.TextReplacementType : Swift.Equatable {}
 extension QRoot.ExpandableLabel.TextReplacementType : Swift.Hashable {}
+extension QRoot.CRRefreshState : Swift.Equatable {}
+extension QRoot.CRRefreshState : Swift.Hashable {}
 extension QRoot.FSPagerViewScrollDirection : Swift.Equatable {}
 extension QRoot.FSPagerViewScrollDirection : Swift.Hashable {}
 extension QRoot.FSPagerViewScrollDirection : Swift.RawRepresentable {}
