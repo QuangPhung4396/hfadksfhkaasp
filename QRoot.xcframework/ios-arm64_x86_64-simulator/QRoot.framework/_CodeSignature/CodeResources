@@ -106,11 +106,11 @@
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		HlW7e3YiBbyumN+gWW2WW5Qi9e8=
+		r4lrxpnpJ0S0DktH0wKuMtUDIdk=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		OuK6Ov91paCqcGtkLhJi3cMj/YQ=
+		PlUDv95aNuNLucXuS8NylRYhVs0=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -118,19 +118,19 @@
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		OuK6Ov91paCqcGtkLhJi3cMj/YQ=
+		PlUDv95aNuNLucXuS8NylRYhVs0=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jeSXfCa0p2acklqaDwwhjbpDmgE=
+		1xlZf7NtyyYUKd8/YviCD3TgFLg=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		HlW7e3YiBbyumN+gWW2WW5Qi9e8=
+		r4lrxpnpJ0S0DktH0wKuMtUDIdk=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		0RdqBtIe+hQyyi8X9MThKnZHS6A=
+		/G/9scnjnVj1EnUe0AyAmAadGkM=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		0RdqBtIe+hQyyi8X9MThKnZHS6A=
+		/G/9scnjnVj1EnUe0AyAmAadGkM=
 		</data>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cc3Pg4iB6tai4r2uhYvEAxSxung=
+		mmviEbkwTpWWt6fXkpxwN5bDm+M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -404,14 +404,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3UXDz+5CXIRj01Abng3srimNvZEJ/mON5Y75lB1zKnE=
+			vRL8U5PaMTK+vcOlPT4KfBEEtBm3v/8ivC2jEcSvUVU=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bFHb/5/DQNAG36RZv+Cf1kg1XRvfKL2X/fbYX9EEupw=
+			MxLc4Xj0BCb9+RkeHcWZxxuUxLM68Mlwd3eL8IhriEY=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -425,28 +425,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bFHb/5/DQNAG36RZv+Cf1kg1XRvfKL2X/fbYX9EEupw=
+			MxLc4Xj0BCb9+RkeHcWZxxuUxLM68Mlwd3eL8IhriEY=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fKCRNZt2Ur8oISa9y8n1WH7Rc5KDQ5oUmo5zvC6ZiI0=
+			DNyA5zYO7bsL8acZJxAu1CD5Xnls4jQ9OSjwWUwIxUk=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3UXDz+5CXIRj01Abng3srimNvZEJ/mON5Y75lB1zKnE=
+			vRL8U5PaMTK+vcOlPT4KfBEEtBm3v/8ivC2jEcSvUVU=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A34yd6SEuiAn7gHASvkEZ5cmmX45MmUKzZmTH6nkd5Q=
+			OCGKUEI8bkoUN4v4LQ9iNedf1QeIagUaHMyMAqdV0yY=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -460,14 +460,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A34yd6SEuiAn7gHASvkEZ5cmmX45MmUKzZmTH6nkd5Q=
+			OCGKUEI8bkoUN4v4LQ9iNedf1QeIagUaHMyMAqdV0yY=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1wesA4S8+znlt9W9wF0oyLjXck23/EI9Ebh+Vl9aW30=
+			J94lT0SjYbyJ5A40jG+eGJb8S+bvwiwFTSoVW08QeyM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

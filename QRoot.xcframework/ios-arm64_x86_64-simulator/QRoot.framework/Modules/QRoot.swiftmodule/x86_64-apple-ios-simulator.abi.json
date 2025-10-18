@@ -601,6 +601,46 @@
         "children": [
           {
             "kind": "Var",
+            "name": "isReady",
+            "printedName": "isReady",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5QRoot9AdsHandleC7isReadySbvp",
+            "mangledName": "$s5QRoot9AdsHandleC7isReadySbvp",
+            "moduleName": "QRoot",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5QRoot9AdsHandleC7isReadySbvg",
+                "mangledName": "$s5QRoot9AdsHandleC7isReadySbvg",
+                "moduleName": "QRoot",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "idsTest",
             "printedName": "idsTest",
             "children": [
@@ -1407,6 +1447,206 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "QRoot"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SplashHandle",
+        "printedName": "SplashHandle",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SplashHandle",
+                "printedName": "QRoot.SplashHandle",
+                "usr": "c:@M@QRoot@objc(cs)SplashHandle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:5QRoot12SplashHandleC6sharedACvpZ",
+            "mangledName": "$s5QRoot12SplashHandleC6sharedACvpZ",
+            "moduleName": "QRoot",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SplashHandle",
+                    "printedName": "QRoot.SplashHandle",
+                    "usr": "c:@M@QRoot@objc(cs)SplashHandle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5QRoot12SplashHandleC6sharedACvgZ",
+                "mangledName": "$s5QRoot12SplashHandleC6sharedACvgZ",
+                "moduleName": "QRoot",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "present",
+            "printedName": "present(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5QRoot12SplashHandleC7presentyyyycF",
+            "mangledName": "$s5QRoot12SplashHandleC7presentyyyycF",
+            "moduleName": "QRoot",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SplashHandle",
+                "printedName": "QRoot.SplashHandle",
+                "usr": "c:@M@QRoot@objc(cs)SplashHandle"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@QRoot@objc(cs)SplashHandle(im)init",
+            "mangledName": "$s5QRoot12SplashHandleCACycfc",
+            "moduleName": "QRoot",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@QRoot@objc(cs)SplashHandle",
+        "mangledName": "$s5QRoot12SplashHandleC",
+        "moduleName": "QRoot",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -28795,7 +29035,7 @@
     {
       "filePath": "\/Users\/quang\/Desktop\/movieroot\/MovieRoot\/QRoot\/Ads\/Admob\/AdsHandle.swift",
       "kind": "Array",
-      "offset": 241,
+      "offset": 248,
       "length": 2,
       "value": "[]"
     },
@@ -28809,7 +29049,7 @@
     {
       "filePath": "\/Users\/quang\/Desktop\/movieroot\/MovieRoot\/QRoot\/Ads\/SplashHandle.swift",
       "kind": "IntegerLiteral",
-      "offset": 110,
+      "offset": 117,
       "length": 1,
       "value": "0"
     },

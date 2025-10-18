@@ -43,6 +43,9 @@ extension QRoot.AdsBanner : GoogleMobileAds.BannerViewDelegate {
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func bannerView(_ _bannerView: GoogleMobileAds.BannerView, didFailToReceiveAdWithError error: any Swift.Error)
 }
 @objc @_inheritsConvenienceInitializers public class AdsHandle : ObjectiveC.NSObject {
+  public var isReady: Swift.Bool {
+    get
+  }
   @objc public var idsTest: [Swift.String]
   @objc public static let shared: QRoot.AdsHandle
   @objc public func awake(completion: @escaping () -> Swift.Void)
@@ -61,6 +64,12 @@ extension QRoot.AdsOpenHandle : GoogleMobileAds.FullScreenContentDelegate {
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func ad(_ ad: any GoogleMobileAds.FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: any Swift.Error)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func adDidRecordImpression(_ ad: any GoogleMobileAds.FullScreenPresentingAd)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func adDidRecordClick(_ ad: any GoogleMobileAds.FullScreenPresentingAd)
+}
+@objc @_inheritsConvenienceInitializers public class SplashHandle : ObjectiveC.NSObject {
+  public static let shared: QRoot.SplashHandle
+  public func present(_ block: @escaping () -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
 }
 public struct DataObject {
   public static var shared: QRoot.DataObject
