@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "hfadksfhkaasp"
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.9"
   spec.summary      = "First version"
   spec.description  = <<-DESC
                     A more detailed description of hfadksfhkaasp.
@@ -13,10 +13,14 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, '15.0'
   spec.swift_version = '5.0'
 
-  spec.dependency 'SwiftSoup'
-  spec.dependency 'CryptoSwift'
-  spec.dependency 'Kingfisher'
+  pod 'KRProgressHUD'
+  pod 'Toast-Swift', '~> 5.0.1'
+  pod 'SDWebImage'
+  pod 'SnapKit'
+
+  spec.dependency 'KRProgressHUD'
+  spec.dependency 'Toast-Swift'
+  spec.dependency 'SDWebImage'
   spec.dependency 'SnapKit'
-  spec.dependency 'Google-Mobile-Ads-SDK'
   spec.vendored_frameworks = 'QRoot.xcframework'
 end

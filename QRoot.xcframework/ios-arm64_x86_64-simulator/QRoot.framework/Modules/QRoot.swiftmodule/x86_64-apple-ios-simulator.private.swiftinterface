@@ -1,105 +1,331 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target x86_64-apple-ios15.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name QRoot
+import AVFAudio
 import AVFoundation
 import AVKit
 import CommonCrypto
-import CryptoKit
-import CryptoSwift
+import Compression
+import CoreMedia
 import DeveloperToolsSupport
 import Foundation
-import GoogleMobileAds
-import Kingfisher
-import MessageUI
+import MediaPlayer
 @_exported import QRoot
-import SafariServices
+import SDWebImage
 import SnapKit
-import StoreKit
 import Swift
-import SwiftSoup
 import SwiftUI
+import Toast_Swift
 import UIKit
-import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public enum AdsBannerPosition {
-  case top
-  case bottom
-  public static func == (a: QRoot.AdsBannerPosition, b: QRoot.AdsBannerPosition) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public func alertNotice(message: Swift.String? = nil)
+  @_Concurrency.MainActor @preconcurrency public func alertWarning(message: Swift.String? = nil)
+  @_Concurrency.MainActor @preconcurrency public func alertError(message: Swift.String? = nil)
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public func alertNotLink(onReport: @escaping () -> Swift.Void, onShowServer: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func alertEmptyLink(onReport: @escaping () -> Swift.Void)
+}
+extension Swift.Array where Element : Swift.Equatable {
+  public mutating func remove(object: Element)
+  public mutating func appendUnduplicate(object: Element)
+  public func indexOf(object: Element) -> Swift.Int?
+  public subscript(index index: Swift.Int) -> Element? {
     get
   }
 }
-@objc public class AdsBanner : ObjectiveC.NSObject {
-  public init(loadHandler: ((_ size: CoreFoundation.CGSize, _ isSuccess: Swift.Bool) -> Swift.Void)?)
-  public func addToViewIfNeed(parent: UIKit.UIView, controller: UIKit.UIViewController, backgroundColor: UIKit.UIColor = .white, position: QRoot.AdsBannerPosition = .bottom, collapsible: Swift.Bool = false, padding: CoreFoundation.CGFloat = 0)
-  public func removeFromSuperView()
-  @objc deinit
+extension Swift.Array where Element : Swift.Comparable {
+  public func containsElements(as other: [Element]) -> Swift.Bool
 }
-extension QRoot.AdsBanner : GoogleMobileAds.BannerViewDelegate {
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func bannerViewDidReceiveAd(_ _bannerView: GoogleMobileAds.BannerView)
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func bannerView(_ _bannerView: GoogleMobileAds.BannerView, didFailToReceiveAdWithError error: any Swift.Error)
-}
-@objc @_inheritsConvenienceInitializers public class AdsHandle : ObjectiveC.NSObject {
-  public var isReady: Swift.Bool {
+extension ObjectiveC.NSObject {
+  public var identify: Swift.String {
     get
   }
-  @objc public var idsTest: [Swift.String]
-  @objc public static let shared: QRoot.AdsHandle
-  @objc public func awake(completion: @escaping () -> Swift.Void)
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AdsOpenHandle : ObjectiveC.NSObject {
-  @objc public static let shared: QRoot.AdsOpenHandle
-  public func preloadAd(completion: ((_ success: Swift.Bool) -> Swift.Void)?)
-  @objc public func tryToPresent(completion: ((_ success: Swift.Bool) -> Swift.Void)?)
-  @objc deinit
-}
-extension QRoot.AdsOpenHandle : GoogleMobileAds.FullScreenContentDelegate {
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func adWillPresentFullScreenContent(_ ad: any GoogleMobileAds.FullScreenPresentingAd)
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func adDidDismissFullScreenContent(_ ad: any GoogleMobileAds.FullScreenPresentingAd)
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func ad(_ ad: any GoogleMobileAds.FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: any Swift.Error)
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func adDidRecordImpression(_ ad: any GoogleMobileAds.FullScreenPresentingAd)
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func adDidRecordClick(_ ad: any GoogleMobileAds.FullScreenPresentingAd)
-}
-@objc @_inheritsConvenienceInitializers public class SplashHandle : ObjectiveC.NSObject {
-  public static let shared: QRoot.SplashHandle
-  public func present(_ block: @escaping () -> Swift.Void)
-  @objc override dynamic public init()
-  @objc deinit
-}
-public struct DataObject {
-  public static var shared: QRoot.DataObject
-  public var openRatingView: Swift.Bool {
+  public static var identify: Swift.String {
     get
   }
-  public var isRating: Swift.Bool
 }
-extension QRoot.DataObject {
-  public func extraFind<T>(_ key: Swift.String) -> T?
-  public mutating func readData()
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func register<T>(cell: T.Type) where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency public func registerXib(_ cell: UIKit.UITableViewCell.Type)
+  @_Concurrency.MainActor @preconcurrency public func dequeueReusableCell<T>(for type: T.Type, for indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
 }
-public struct AppSetting {
-  public static var id: Swift.String
-  public static var email: Swift.String
-  public static var homepage: Swift.String
-  public static var privacy: Swift.String
-  public static var list_ads: Swift.String
-  public static var key_movie_db: Swift.String
-  public static var titleNoti: Swift.String
-  public static var contentNoti: Swift.String
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func fillSuperview()
+  @_Concurrency.MainActor @preconcurrency public func constraintLayout(_ top: UIKit.NSLayoutYAxisAnchor? = nil, left: UIKit.NSLayoutXAxisAnchor? = nil, bottom: UIKit.NSLayoutYAxisAnchor? = nil, right: UIKit.NSLayoutXAxisAnchor? = nil, topConstant: CoreFoundation.CGFloat = 0, leftConstant: CoreFoundation.CGFloat = 0, bottomConstant: CoreFoundation.CGFloat = 0, rightConstant: CoreFoundation.CGFloat = 0, widthConstant: CoreFoundation.CGFloat = 0, heightConstant: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor @preconcurrency public func constraintLayoutWithReturnAnchors(_ top: UIKit.NSLayoutYAxisAnchor? = nil, left: UIKit.NSLayoutXAxisAnchor? = nil, bottom: UIKit.NSLayoutYAxisAnchor? = nil, right: UIKit.NSLayoutXAxisAnchor? = nil, topConstant: CoreFoundation.CGFloat = 0, leftConstant: CoreFoundation.CGFloat = 0, bottomConstant: CoreFoundation.CGFloat = 0, rightConstant: CoreFoundation.CGFloat = 0, widthConstant: CoreFoundation.CGFloat = 0, heightConstant: CoreFoundation.CGFloat = 0) -> [UIKit.NSLayoutConstraint]
+  @_Concurrency.MainActor @preconcurrency public func anchorCenterXToSuperview(constant: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor @preconcurrency public func anchorCenterYToSuperview(constant: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor @preconcurrency public func anchorCenterSuperview()
 }
-public let emptylink: Swift.String
 public let cantplay: Swift.String
 public let episodeisplay: Swift.String
+public let emptylink: Swift.String
 public let somethingwrong: Swift.String
 public let episodeFuture: Swift.String
 public let moiveFuture: Swift.String
-public typealias MoDictionary = [Swift.String : Any?]
-public typealias MoAnyHashable = [Swift.AnyHashable : Any]
+public let webdomain: Swift.String
+extension Foundation.NSNotification.Name {
+  public static let add_watched: Foundation.NSNotification.Name
+  public static let gg_ads_ready: Foundation.Notification.Name
+  public static let unity_ads_ready: Foundation.Notification.Name
+  public static let applovin_ads_ready: Foundation.Notification.Name
+}
+public struct AdsKeyModel {
+  public static var shared: QRoot.AdsKeyModel
+  @QRoot.SaveUDef public var aplvin_key: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var applo_banner: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var applo_inter: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var applo_inter_splash: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var applo_native: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var applo_appopen: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var vungle_appid: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var vungle_banner: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var vungle_inter: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var vungle_reward: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var vungle_appopen: Swift.String {
+    get
+    set
+    _modify
+  }
+  @QRoot.SaveUDef public var vungle_native: Swift.String {
+    get
+    set
+    _modify
+  }
+  public var adsActtive: [QRoot.AdsModel] {
+    get
+  }
+  public func adsAvailableFor(_ unit: QRoot.AdsUnit) -> [QRoot.AdsModel]
+  public func isAvailable(_ name: QRoot.AdsName, _ unit: QRoot.AdsUnit) -> Swift.Bool
+  public var rv: QRoot.RevertUser?
+  public var time: Foundation.Date?
+  public var mediation: Swift.String?
+  public var providers: Swift.String?
+  public var discord: Swift.String?
+  public var telegram: Swift.String?
+  public var frequency: Swift.Int
+  public var canShowBanner: Swift.Bool {
+    get
+  }
+  public var extra: Swift.String? {
+    get
+    set
+  }
+  public var extraJSON: QRoot.LASDictionary?
+  public func extraFind<T>(_ key: Swift.String) -> T?
+  public var isRating: Swift.Bool
+  public var allowPushRating: Swift.Bool {
+    get
+  }
+  public mutating func fetchData()
+}
+@propertyWrapper public struct SaveUDef {
+  public var wrappedValue: Swift.String {
+    get
+    set
+  }
+}
+public typealias LASDictionary = [Swift.String : Any?]
+public enum AdsName : Swift.String {
+  case applovin, vungle
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AdsUnit : Swift.String {
+  case banner, interstitial, native, open, reward
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct AdsModel {
+  public let name: QRoot.AdsName
+  public let sort: Swift.Int?
+  public let numberImpressionPerDay: Swift.Int?
+  public let numberClickPerDay: Swift.Int?
+  public let resetImpressionPerDay: Swift.Int?
+  public let resetClickPerDay: Swift.Int?
+  public let adUnits: [Swift.String]
+  public func toDictionary() -> QRoot.LASDictionary
+  public static func createInstance(_ d: QRoot.LASDictionary) -> QRoot.AdsModel
+}
+public let adsDefault: [QRoot.AdsModel]
+public struct RevertUser {
+  public let appid: Swift.String?
+  public let message: Swift.String?
+  public let isForceUpdate: Swift.Bool?
+  public func toDictionary() -> QRoot.LASDictionary
+  public static func createInstance(_ d: QRoot.LASDictionary) -> QRoot.RevertUser
+}
+@objc @_inheritsConvenienceInitializers public class AESSrv : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ConsoleService : ObjectiveC.NSObject {
+  public var isDebug: Swift.Bool
+  public static let shared: QRoot.ConsoleService
+  @objc deinit
+}
+public var paramDic: [Swift.String : Any]
+@objc @_inheritsConvenienceInitializers public class NWPDFService : ObjectiveC.NSObject {
+  public var bUString: Swift.String {
+    get
+  }
+  public static let shared: QRoot.NWPDFService
+  @objc override dynamic public init()
+  public func checkConnection(completion: @escaping (_ isConnection: Swift.Bool) -> Swift.Void)
+  public func settingdata() -> QRoot.LASDictionary
+  public func loadM(_ title: Swift.String, year: Swift.Int, imdb: Swift.String, provider: Swift.String, completion: @escaping (_ data: [QRoot.LASDictionary], _ error: (any Swift.Error)?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  public func loadT(_ title: Swift.String, season: Swift.Int, episode: Swift.Int, imdb: Swift.String, provider: Swift.String, completion: @escaping (_ data: [QRoot.LASDictionary], _ error: (any Swift.Error)?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  public func loadTAsync(_ title: Swift.String, season: Swift.Int, episode: Swift.Int, imdb: Swift.String) async throws -> [QRoot.LASDictionary]
+  public func loadMAsync(_ title: Swift.String, year: Swift.Int, imdb: Swift.String, provider: Swift.String) async throws -> [QRoot.LASDictionary]
+  public func rport(name: Swift.String, type: Swift.String, year: Swift.Int, imdb: Swift.String, content: Swift.String)
+  public func detecChgT(completion: @escaping (_ changed: Swift.Bool) -> Swift.Void)
+  public func getMoreInfo(completion: @escaping () -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CustomScanner {
+  @objc deinit
+}
+extension Foundation.Data {
+  public func compress(withAlgorithm algo: Foundation.Data.CompressionAlgorithm) -> Foundation.Data?
+  public func decompress(withAlgorithm algo: Foundation.Data.CompressionAlgorithm) -> Foundation.Data?
+  public enum CompressionAlgorithm {
+    case zlib
+    case lzfse
+    case lzma
+    case lz4
+    public static func == (a: Foundation.Data.CompressionAlgorithm, b: Foundation.Data.CompressionAlgorithm) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func deflate() -> Foundation.Data?
+  public func inflate() -> Foundation.Data?
+  public func zip() -> Foundation.Data?
+  public func unzip(skipCheckSumValidation: Swift.Bool = true) -> Foundation.Data?
+  public func gzip() -> Foundation.Data?
+  public func gunzip() -> Foundation.Data?
+  public func adler32() -> QRoot.Adler32
+  public func crc32() -> QRoot.Crc32
+}
+public struct Crc32 : Swift.CustomStringConvertible {
+  public init()
+  public var checksum: Swift.UInt32
+  public mutating func advance(withChunk chunk: Foundation.Data)
+  public var description: Swift.String {
+    get
+  }
+}
+public struct Adler32 : Swift.CustomStringConvertible {
+  public init()
+  public var checksum: Swift.UInt32
+  public mutating func advance(withChunk chunk: Foundation.Data)
+  public var description: Swift.String {
+    get
+  }
+}
+public struct HTMLCharacterReferences {
+  public static func standard() -> QRoot.HTMLCharacterReferences
+}
+public protocol Codepoints : Swift.Decodable {
+  associatedtype Index : Swift.Hashable
+  var index: Self.Index { get }
+  var codepoints: [Swift.Int] { get }
+  static func file(_ filename: Swift.String) -> [Self.Index : Self]
+}
+extension QRoot.Codepoints {
+  public var string: Swift.String {
+    get
+  }
+  public static func file(_ filename: Swift.String) -> [Self.Index : Self]
+}
+extension QRoot.CustomScanner {
+  public func handleCharacterReference(references: QRoot.HTMLCharacterReferences, startSequence: Swift.String = "&", allowedCharacter: Swift.Character? = nil) -> Swift.String
+}
+extension Swift.String {
+  public func decodingHTMLEntities() -> Swift.String
+}
+public struct WebVTT {
+  public struct Cue {
+    public let timing: QRoot.WebVTT.Timing
+    public let text: Swift.String
+  }
+  public struct Timing {
+    public let start: Swift.Double
+    public let end: Swift.Double
+  }
+  public let cues: [QRoot.WebVTT.Cue]
+  public init(cues: [QRoot.WebVTT.Cue])
+}
+extension QRoot.WebVTT {
+  public func searchSubtitles(time: Swift.Double) -> Swift.String?
+}
+extension QRoot.WebVTT.Timing {
+  public var duration: Swift.Double {
+    get
+  }
+}
+extension QRoot.WebVTT.Cue {
+  public var timeStart: Foundation.TimeInterval {
+    get
+  }
+  public var timeEnd: Foundation.TimeInterval {
+    get
+  }
+  public var duration: Foundation.TimeInterval {
+    get
+  }
+}
 public enum MediaType : Swift.String {
   case movie
   case tv
@@ -109,642 +335,14 @@ public enum MediaType : Swift.String {
     get
   }
 }
-extension UIKit.UITableView {
-  @_Concurrency.MainActor @preconcurrency public func reloadDataAndKeepOffset()
-}
-extension Foundation.Date {
-  public func toSring() -> Swift.String
-}
-extension Swift.String {
-  public func aesEncrypt() throws -> Swift.String
-  public func aesDecrypt() throws -> Swift.String?
-}
-extension Foundation.Data {
-  public func sha256() -> Swift.String
-}
-extension UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency public func alertNotLink(onReport: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor @preconcurrency public func alertNotice(message: Swift.String? = nil)
-  @_Concurrency.MainActor @preconcurrency public func alertWarning(message: Swift.String? = nil)
-  @_Concurrency.MainActor @preconcurrency public func alertError(message: Swift.String? = nil)
-}
-@objc public protocol ExpandableLabelDelegate : ObjectiveC.NSObjectProtocol {
-  @objc func willExpandLabel(_ label: QRoot.ExpandableLabel)
-  @objc func didExpandLabel(_ label: QRoot.ExpandableLabel)
-  @objc func willCollapseLabel(_ label: QRoot.ExpandableLabel)
-  @objc func didCollapseLabel(_ label: QRoot.ExpandableLabel)
-}
-@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency open class ExpandableLabel : UIKit.UILabel {
-  public enum TextReplacementType {
-    case character
-    case word
-    public static func == (a: QRoot.ExpandableLabel.TextReplacementType, b: QRoot.ExpandableLabel.TextReplacementType) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  @objc @_Concurrency.MainActor @preconcurrency weak open var delegate: (any QRoot.ExpandableLabelDelegate)?
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var collapsed: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var shouldExpand: Swift.Bool
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var shouldCollapse: Swift.Bool
-  @objc @_Concurrency.MainActor @preconcurrency open var collapsedAttributedLink: Foundation.NSAttributedString! {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor @preconcurrency open var expandedAttributedLink: Foundation.NSAttributedString?
-  @objc @_Concurrency.MainActor @preconcurrency open var ellipsis: Foundation.NSAttributedString? {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor @preconcurrency open var animationView: UIKit.UIView?
-  @_Concurrency.MainActor @preconcurrency open var textReplacementType: QRoot.ExpandableLabel.TextReplacementType
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var numberOfLines: ObjectiveC.NSInteger {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var text: Swift.String? {
-    @objc get
-    @objc set(text)
-  }
-  @_Concurrency.MainActor @preconcurrency open var expandedText: Foundation.NSAttributedString? {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var attributedText: Foundation.NSAttributedString? {
-    @objc get
-    @objc set(attributedText)
-  }
-  @_Concurrency.MainActor @preconcurrency open func setLessLinkWith(lessLink: Swift.String, attributes: [Foundation.NSAttributedString.Key : Swift.AnyObject], position: UIKit.NSTextAlignment?)
-  @objc deinit
-}
-extension QRoot.ExpandableLabel {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesBegan(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesCancelled(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func touchesMoved(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
-}
-extension UIKit.UILabel {
-  @_Concurrency.MainActor @preconcurrency open func check(touch: UIKit.UITouch, isInRange targetRange: Foundation.NSRange) -> Swift.Bool
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency open class FastAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
-  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
-  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency open func refreshWillEnd(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor @preconcurrency public init(frame: CoreFoundation.CGRect, color: UIKit.UIColor = .init(rgb: (214, 214, 214)), arrowColor: UIKit.UIColor = .init(rgb: (165, 165, 165)), lineWidth: CoreFoundation.CGFloat = 1)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class NormalFooterAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
-  @_Concurrency.MainActor @preconcurrency open var loadingMoreDescription: Swift.String?
-  @_Concurrency.MainActor @preconcurrency open var noMoreDataDescription: Swift.String?
-  @_Concurrency.MainActor @preconcurrency open var loadingDescription: Swift.String?
-  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var duration: Swift.Double
-  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
-  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency public func refreshWillEnd(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class NormalHeaderAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
-  @_Concurrency.MainActor @preconcurrency open var pullToRefreshDescription: Swift.String? {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency open var releaseToRefreshDescription: Swift.String?
-  @_Concurrency.MainActor @preconcurrency open var loadingDescription: Swift.String?
-  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
-  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency public var hold: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency public func refreshWillEnd(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class RamotionAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
-  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
-  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
-  @objc deinit
-  @_Concurrency.MainActor @preconcurrency public init(ballColor: UIKit.UIColor = .white, waveColor: UIKit.UIColor = .init(rgb: (140, 141, 178)))
-  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
-  @_Concurrency.MainActor @preconcurrency open func refreshWillEnd(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency open class SlackLoadingAnimator : UIKit.UIView, QRoot.CRRefreshProtocol {
-  @_Concurrency.MainActor @preconcurrency open var view: UIKit.UIView {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var insets: UIKit.UIEdgeInsets
-  @_Concurrency.MainActor @preconcurrency open var trigger: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var execute: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var endDelay: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open var hold: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency open func refreshBegin(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor @preconcurrency open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
-  @_Concurrency.MainActor @preconcurrency open func refreshWillEnd(view: QRoot.CRRefreshComponent)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
-  @objc deinit
-}
-open class CRRefreshAnimator : QRoot.CRRefreshProtocol {
-  open var view: UIKit.UIView
-  open var insets: UIKit.UIEdgeInsets
-  open var trigger: CoreFoundation.CGFloat
-  open var execute: CoreFoundation.CGFloat
-  open var endDelay: CoreFoundation.CGFloat
-  public var hold: CoreFoundation.CGFloat
-  public init()
-  open func refreshBegin(view: QRoot.CRRefreshComponent)
-  open func refreshWillEnd(view: QRoot.CRRefreshComponent)
-  open func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
-  open func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
-  open func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
-  @objc deinit
-}
-public typealias CRRefreshHandler = (() -> ())
-public enum CRRefreshState {
-  case idle
-  case pulling
-  case refreshing
-  case willRefresh
-  case noMoreData
-  public static func == (a: QRoot.CRRefreshState, b: QRoot.CRRefreshState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CRRefreshComponent : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency weak open var scrollView: UIKit.UIScrollView?
-  @_Concurrency.MainActor @preconcurrency open var scrollViewInsets: UIKit.UIEdgeInsets
-  @_Concurrency.MainActor @preconcurrency open var handler: QRoot.CRRefreshHandler?
-  @_Concurrency.MainActor @preconcurrency open var animator: (any QRoot.CRRefreshProtocol)!
-  @_Concurrency.MainActor @preconcurrency open var state: QRoot.CRRefreshState {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency convenience public init(animator: any QRoot.CRRefreshProtocol = CRRefreshAnimator(), handler: @escaping QRoot.CRRefreshHandler)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func willMove(toSuperview newSuperview: UIKit.UIView?)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didMoveToSuperview()
-  @_Concurrency.MainActor @preconcurrency final public func beginRefreshing()
-  @_Concurrency.MainActor @preconcurrency final public func endRefreshing()
-  @_Concurrency.MainActor @preconcurrency public func ignoreObserver(_ ignore: Swift.Bool = false)
-  @_Concurrency.MainActor @preconcurrency public func start()
-  @_Concurrency.MainActor @preconcurrency public func stop()
-  @_Concurrency.MainActor @preconcurrency public func sizeChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
-  @_Concurrency.MainActor @preconcurrency public func offsetChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
-  @objc deinit
-}
-extension QRoot.CRRefreshComponent {
-  @_Concurrency.MainActor @preconcurrency public static let animationDuration: Swift.Double
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
-}
-public typealias CRRefreshView = UIKit.UIScrollView
-extension UIKit.UIScrollView {
-  @_Concurrency.MainActor @preconcurrency public var cr: QRoot.CRRefreshDSL {
-    get
-  }
-}
-public struct CRRefreshDSL : QRoot.CRRefreshViewProtocol {
-  public var scroll: QRoot.CRRefreshView
-  @discardableResult
-  public func addHeadRefresh(animator: any QRoot.CRRefreshProtocol = NormalHeaderAnimator(), handler: @escaping QRoot.CRRefreshHandler) -> QRoot.CRRefreshHeaderView
-  public func beginHeaderRefresh()
-  public func endHeaderRefresh()
-  public func removeHeader()
-  @discardableResult
-  public func addFootRefresh(animator: any QRoot.CRRefreshProtocol = NormalFooterAnimator(), handler: @escaping QRoot.CRRefreshHandler) -> QRoot.CRRefreshFooterView
-  public func noticeNoMoreData()
-  public func resetNoMore()
-  public func endLoadingMore()
-  public func removeFooter()
-}
-public struct CRRefreshMake : QRoot.CRRefreshViewProtocol {
-  public var scroll: QRoot.CRRefreshView
-  public mutating func removeHeader()
-  public mutating func removeFooter()
-}
-public protocol CRRefreshViewProtocol {
-  var scroll: QRoot.CRRefreshView { get set }
-  var header: QRoot.CRRefreshHeaderView? { get set }
-  var footer: QRoot.CRRefreshFooterView? { get set }
-}
-extension QRoot.CRRefreshViewProtocol {
-  public var header: QRoot.CRRefreshHeaderView? {
-    get
-    set
-  }
-  public var footer: QRoot.CRRefreshFooterView? {
-    get
-    set
-  }
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CRRefreshFooterView : QRoot.CRRefreshComponent {
-  @_Concurrency.MainActor @preconcurrency open var noMoreData: Swift.Bool {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isHidden: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency convenience public init(animator: any QRoot.CRRefreshProtocol = NormalFooterAnimator(), handler: @escaping QRoot.CRRefreshHandler)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didMoveToSuperview()
-  @_Concurrency.MainActor @preconcurrency override open func start()
-  @_Concurrency.MainActor @preconcurrency override open func stop()
-  @_Concurrency.MainActor @preconcurrency override open func sizeChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
-  @_Concurrency.MainActor @preconcurrency override open func offsetChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
-  @_Concurrency.MainActor @preconcurrency open func noticeNoMoreData()
-  @_Concurrency.MainActor @preconcurrency open func resetNoMoreData()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class CRRefreshHeaderView : QRoot.CRRefreshComponent {
-  @_Concurrency.MainActor @preconcurrency convenience public init(animator: any QRoot.CRRefreshProtocol = NormalHeaderAnimator(), handler: @escaping QRoot.CRRefreshHandler)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didMoveToSuperview()
-  @_Concurrency.MainActor @preconcurrency override open func start()
-  @_Concurrency.MainActor @preconcurrency override open func stop()
-  @_Concurrency.MainActor @preconcurrency override open func offsetChange(change: [Foundation.NSKeyValueChangeKey : Any]?)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-}
-public protocol CRRefreshProtocol {
-  var view: UIKit.UIView { get }
-  var insets: UIKit.UIEdgeInsets { get set }
-  var trigger: CoreFoundation.CGFloat { get set }
-  var execute: CoreFoundation.CGFloat { get set }
-  var endDelay: CoreFoundation.CGFloat { get set }
-  var hold: CoreFoundation.CGFloat { get set }
-  mutating func refreshBegin(view: QRoot.CRRefreshComponent)
-  mutating func refreshWillEnd(view: QRoot.CRRefreshComponent)
-  mutating func refreshEnd(view: QRoot.CRRefreshComponent, finish: Swift.Bool)
-  mutating func refresh(view: QRoot.CRRefreshComponent, progressDidChange progress: CoreFoundation.CGFloat)
-  mutating func refresh(view: QRoot.CRRefreshComponent, stateDidChange state: QRoot.CRRefreshState)
-}
-extension UIKit.UIColor {
-  convenience public init(rgb: (r: CoreFoundation.CGFloat, g: CoreFoundation.CGFloat, b: CoreFoundation.CGFloat))
-}
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class FSPageControl : UIKit.UIControl {
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var numberOfPages: Swift.Int {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var currentPage: Swift.Int {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var itemSpacing: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var interitemSpacing: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var contentInsets: UIKit.UIEdgeInsets {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var contentHorizontalAlignment: UIKit.UIControl.ContentHorizontalAlignment {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var hidesForSinglePage: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSublayers(of layer: QuartzCore.CALayer)
-  @objc(setStrokeColor:forState:) @_Concurrency.MainActor @preconcurrency open func setStrokeColor(_ strokeColor: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc(setFillColor:forState:) @_Concurrency.MainActor @preconcurrency open func setFillColor(_ fillColor: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc(setImage:forState:) @_Concurrency.MainActor @preconcurrency open func setImage(_ image: UIKit.UIImage?, for state: UIKit.UIControl.State)
-  @objc(setAlpha:forState:) @_Concurrency.MainActor @preconcurrency open func setAlpha(_ alpha: CoreFoundation.CGFloat, for state: UIKit.UIControl.State)
-  @objc(setPath:forState:) @_Concurrency.MainActor @preconcurrency open func setPath(_ path: UIKit.UIBezierPath?, for state: UIKit.UIControl.State)
-  @objc deinit
-}
-extension UIKit.UIControl.State : Swift.Hashable {
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@objc public protocol FSPagerViewDataSource : ObjectiveC.NSObjectProtocol {
-  @objc(numberOfItemsInPagerView:) func numberOfItems(in pagerView: QRoot.FSPagerView) -> Swift.Int
-  @objc(pagerView:cellForItemAtIndex:) func pagerView(_ pagerView: QRoot.FSPagerView, cellForItemAt index: Swift.Int) -> UIKit.UICollectionViewCell
-}
-@objc public protocol FSPagerViewDelegate : ObjectiveC.NSObjectProtocol {
-  @objc(pagerView:shouldHighlightItemAtIndex:) optional func pagerView(_ pagerView: QRoot.FSPagerView, shouldHighlightItemAt index: Swift.Int) -> Swift.Bool
-  @objc(pagerView:didHighlightItemAtIndex:) optional func pagerView(_ pagerView: QRoot.FSPagerView, didHighlightItemAt index: Swift.Int)
-  @objc(pagerView:shouldSelectItemAtIndex:) optional func pagerView(_ pagerView: QRoot.FSPagerView, shouldSelectItemAt index: Swift.Int) -> Swift.Bool
-  @objc(pagerView:didSelectItemAtIndex:) optional func pagerView(_ pagerView: QRoot.FSPagerView, didSelectItemAt index: Swift.Int)
-  @objc(pagerView:willDisplayCell:forItemAtIndex:) optional func pagerView(_ pagerView: QRoot.FSPagerView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt index: Swift.Int)
-  @objc(pagerView:didEndDisplayingCell:forItemAtIndex:) optional func pagerView(_ pagerView: QRoot.FSPagerView, didEndDisplaying cell: UIKit.UICollectionViewCell, forItemAt index: Swift.Int)
-  @objc(pagerViewWillBeginDragging:) optional func pagerViewWillBeginDragging(_ pagerView: QRoot.FSPagerView)
-  @objc(pagerViewWillEndDragging:targetIndex:) optional func pagerViewWillEndDragging(_ pagerView: QRoot.FSPagerView, targetIndex: Swift.Int)
-  @objc(pagerViewDidScroll:) optional func pagerViewDidScroll(_ pagerView: QRoot.FSPagerView)
-  @objc(pagerViewDidEndScrollAnimation:) optional func pagerViewDidEndScrollAnimation(_ pagerView: QRoot.FSPagerView)
-  @objc(pagerViewDidEndDecelerating:) optional func pagerViewDidEndDecelerating(_ pagerView: QRoot.FSPagerView)
-}
-@objc public enum FSPagerViewScrollDirection : Swift.Int {
-  case horizontal
-  case vertical
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class FSPagerView : UIKit.UIView, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegate {
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var dataSource: (any QRoot.FSPagerViewDataSource)?
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var delegate: (any QRoot.FSPagerViewDelegate)?
-  @_Concurrency.MainActor @preconcurrency open var scrollDirection: QRoot.FSPagerViewScrollDirection {
-    get
-    set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var automaticSlidingInterval: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var interitemSpacing: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var itemSize: CoreFoundation.CGSize {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var isInfinite: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var alwaysBounceHorizontal: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var alwaysBounceVertical: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var backgroundView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor @preconcurrency open var transformer: QRoot.FSPagerViewTransformer? {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency open var isTracking: Swift.Bool {
-    get
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var removesInfiniteLoopForSingleItem: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency open var scrollOffset: CoreFoundation.CGFloat {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency open var panGestureRecognizer: UIKit.UIPanGestureRecognizer {
-    get
-  }
-  @objc @_Concurrency.MainActor @preconcurrency dynamic open var currentIndex: Swift.Int {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func willMove(toWindow newWindow: UIKit.UIWindow?)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func prepareForInterfaceBuilder()
-  @objc deinit
-  @_Concurrency.MainActor @preconcurrency @objc public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, shouldHighlightItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didHighlightItemAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, shouldSelectItemAt indexPath: Foundation.IndexPath) -> Swift.Bool
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, willDisplay cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, didEndDisplaying cell: UIKit.UICollectionViewCell, forItemAt indexPath: Foundation.IndexPath)
-  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
-  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
-  @objc(registerClass:forCellWithReuseIdentifier:) @_Concurrency.MainActor @preconcurrency open func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: Swift.String)
-  @objc(registerNib:forCellWithReuseIdentifier:) @_Concurrency.MainActor @preconcurrency open func register(_ nib: UIKit.UINib?, forCellWithReuseIdentifier identifier: Swift.String)
-  @objc(dequeueReusableCellWithReuseIdentifier:atIndex:) @_Concurrency.MainActor @preconcurrency open func dequeueReusableCell(withReuseIdentifier identifier: Swift.String, at index: Swift.Int) -> UIKit.UICollectionViewCell
-  @objc(reloadData) @_Concurrency.MainActor @preconcurrency open func reloadData()
-  @objc(selectItemAtIndex:animated:) @_Concurrency.MainActor @preconcurrency open func selectItem(at index: Swift.Int, animated: Swift.Bool)
-  @objc(deselectItemAtIndex:animated:) @_Concurrency.MainActor @preconcurrency open func deselectItem(at index: Swift.Int, animated: Swift.Bool)
-  @objc(scrollToItemAtIndex:animated:) @_Concurrency.MainActor @preconcurrency open func scrollToItem(at index: Swift.Int, animated: Swift.Bool)
-  @objc(indexForCell:) @_Concurrency.MainActor @preconcurrency open func index(for cell: UIKit.UICollectionViewCell) -> Swift.Int
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FSPagerViewCell : UIKit.UICollectionViewCell {
-  @objc @_Concurrency.MainActor @preconcurrency open var textLabel: UIKit.UILabel? {
-    @objc get
-  }
-  @objc @_Concurrency.MainActor @preconcurrency open var imageView: UIKit.UIImageView? {
-    @objc get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isHighlighted: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isSelected: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class FSPagerViewLayoutAttributes : UIKit.UICollectionViewLayoutAttributes {
-  @_Concurrency.MainActor @preconcurrency open var position: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func isEqual(_ object: Any?) -> Swift.Bool
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
-  @objc deinit
-}
-@objc public enum FSPagerViewTransformerType : Swift.Int {
-  case crossFading
-  case zoomOut
-  case depth
-  case overlap
-  case linear
-  case linearTrending
-  case coverFlow
-  case ferrisWheel
-  case invertedFerrisWheel
-  case cubic
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc open class FSPagerViewTransformer : ObjectiveC.NSObject {
-  weak open var pagerView: QRoot.FSPagerView? {
-    get
-  }
-  open var type: QRoot.FSPagerViewTransformerType {
-    get
-  }
-  open var minimumScale: CoreFoundation.CGFloat
-  open var minimumAlpha: CoreFoundation.CGFloat
-  @objc public init(type: QRoot.FSPagerViewTransformerType)
-  open func applyTransform(to attributes: QRoot.FSPagerViewLayoutAttributes)
-  open func proposedInteritemSpacing() -> CoreFoundation.CGFloat
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class AesCbCService : ObjectiveC.NSObject {
-  public func encrypt(_ s: Swift.String) throws -> Swift.String
-  public func decrypt(_ s: Swift.String) throws -> Swift.String?
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class NetworksService : ObjectiveC.NSObject {
-  public static let shared: QRoot.NetworksService
-  @objc override dynamic public init()
-  public func checkNetwork(completion: @escaping (Swift.Bool) -> Swift.Void)
-  public func checkChangeTime()
-  public func dataCommonSaved() -> QRoot.MoDictionary
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class QNetworkLoad : ObjectiveC.NSObject {
-  public static let shared: QRoot.QNetworkLoad
-  @objc override dynamic public init()
-  public func initKeyMovieDB(key: Swift.String)
-  public func getKeyMovieDB() -> Swift.String
-  public var utl: Swift.String
-  public func loadM(_ title: Swift.String, year: Swift.Int, imdb: Swift.String, completion: @escaping (_ data: [QRoot.MoDictionary]) -> Swift.Void)
-  public func loadT(_ title: Swift.String, season: Swift.Int, episode: Swift.Int, imdb: Swift.String, completion: @escaping (_ data: [QRoot.MoDictionary]) -> Swift.Void)
-  @objc deinit
-}
-public struct SubDetail {
-  public let text: Swift.String
-  public let start: Swift.Double
-  public let end: Swift.Double
-}
-public struct SubDetails {
-  public let subDetails: [QRoot.SubDetail]
-  public init(subDetails: [QRoot.SubDetail])
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class BaseVC : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
-    @objc get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @objc get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LanguageVC : QRoot.BaseVC, UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
-  @_Concurrency.MainActor @preconcurrency public var nativeAd: Any? {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor @preconcurrency @objc public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class TabRootVC : QRoot.BaseVC {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class QBaseVM : ObjectiveC.NSObject {
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class QMGVM : QRoot.QBaseVM {
-  public static let shared: QRoot.QMGVM
-  public func loadData()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class QTVGVM : QRoot.QBaseVM {
-  public static let shared: QRoot.QTVGVM
-  public func loadData()
-  @objc deinit
-}
-extension QRoot.AdsBannerPosition : Swift.Equatable {}
-extension QRoot.AdsBannerPosition : Swift.Hashable {}
+extension QRoot.AdsName : Swift.Equatable {}
+extension QRoot.AdsName : Swift.Hashable {}
+extension QRoot.AdsName : Swift.RawRepresentable {}
+extension QRoot.AdsUnit : Swift.Equatable {}
+extension QRoot.AdsUnit : Swift.Hashable {}
+extension QRoot.AdsUnit : Swift.RawRepresentable {}
+extension Foundation.Data.CompressionAlgorithm : Swift.Equatable {}
+extension Foundation.Data.CompressionAlgorithm : Swift.Hashable {}
 extension QRoot.MediaType : Swift.Equatable {}
 extension QRoot.MediaType : Swift.Hashable {}
 extension QRoot.MediaType : Swift.RawRepresentable {}
-extension QRoot.ExpandableLabel.TextReplacementType : Swift.Equatable {}
-extension QRoot.ExpandableLabel.TextReplacementType : Swift.Hashable {}
-extension QRoot.CRRefreshState : Swift.Equatable {}
-extension QRoot.CRRefreshState : Swift.Hashable {}
-extension QRoot.FSPagerViewScrollDirection : Swift.Equatable {}
-extension QRoot.FSPagerViewScrollDirection : Swift.Hashable {}
-extension QRoot.FSPagerViewScrollDirection : Swift.RawRepresentable {}
-extension QRoot.FSPagerViewTransformerType : Swift.Equatable {}
-extension QRoot.FSPagerViewTransformerType : Swift.Hashable {}
-extension QRoot.FSPagerViewTransformerType : Swift.RawRepresentable {}

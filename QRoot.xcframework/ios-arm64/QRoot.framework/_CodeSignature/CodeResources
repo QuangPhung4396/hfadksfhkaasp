@@ -4,101 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>ActorItemCell.nib</key>
+		<key>1yu@3x.png</key>
 		<data>
-		9DeC8AzICn7Im3Oj0XRRxiLEIq8=
+		3GpmATkh+fZCd0NFXZLnq4sGpBk=
 		</data>
-		<key>AdsNativeAd.nib</key>
+		<key>3jl@3x.png</key>
 		<data>
-		m2H6UMuSE+1u4Wr1oGgcbV/gFJQ=
+		WV1qUuIFweBwHc0Ey1MMH1a3lvQ=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		RBoOmh9g/SkdD2t5QZWhnpMGlRo=
-		</data>
-		<key>CastActionCell.nib</key>
-		<data>
-		KXAxXfMnyc4VmEbiN3M28+U2nHU=
-		</data>
-		<key>CastActionItemCell.nib</key>
-		<data>
-		BKMjEAjtMSWgq0+VZFALO1ofAQo=
-		</data>
-		<key>CastDetailCell.nib</key>
-		<data>
-		m3fQXI2njadpjcgY8oy4OyYgy+0=
-		</data>
-		<key>CastIntroCell.nib</key>
-		<data>
-		2wuasXoKwAWR+4xZam4ZplyLCbM=
-		</data>
-		<key>CastKnowForCell.nib</key>
-		<data>
-		B9+aCaDnG7bbg0MCs3tYvr7zDmU=
-		</data>
-		<key>ContinueCell.nib</key>
-		<data>
-		J/1OommuP03vuSt5cXb2KcWfXQc=
-		</data>
-		<key>DataRateCell.nib</key>
-		<data>
-		rHJkFvROBfl62CDd5DHvAqf40u4=
-		</data>
-		<key>DetailInforCell.nib</key>
-		<data>
-		LagFVyk6a3q5W7YeL2MAeoQoHoo=
-		</data>
-		<key>DetailIntroduceCell.nib</key>
-		<data>
-		bHnXS28kl8XNMp0d6DGiG20aJMA=
-		</data>
-		<key>DetailListSesonCell.nib</key>
-		<data>
-		qhcZGD482rJOssg4c1EbJUcsrsA=
-		</data>
-		<key>DetailListSesonItemCell.nib</key>
-		<data>
-		eTxOxJohJs/VTVLbtTiJmFewAT8=
-		</data>
-		<key>DetailMoreLikeCell.nib</key>
-		<data>
-		DvdN7E6fBIlDz4Z2E1Oz/b5wKvU=
-		</data>
-		<key>DetailScenesCell.nib</key>
-		<data>
-		B1rFFQGmBkoBe7PQLG1kDHqfZu4=
-		</data>
-		<key>DetailSesonCell.nib</key>
-		<data>
-		28mltCmA/SL3/h4j6JNDm1V0OMc=
-		</data>
-		<key>DetailSesonItemCell.nib</key>
-		<data>
-		wdKwVjoNM2zYnrzeqe8lAkCYEAs=
-		</data>
-		<key>DetailTrailerCell.nib</key>
-		<data>
-		IsDiVyYGNGRsWwFGs1i/F7PCf2o=
-		</data>
-		<key>DetailTrailerItemCell.nib</key>
-		<data>
-		IkJT0dammLf/UdZBtXP4qtp40HQ=
-		</data>
-		<key>GoogleMobileAdsResources.bundle/Info.plist</key>
-		<data>
-		u5NspBbBsdGqaLwEZJxFxMsKDOA=
-		</data>
-		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		VWCA3MeaiPMoOAS1uOteTSLX8js=
+		TKvfdL03EkZF+Y+ThbHGtyDl7Hs=
 		</data>
 		<key>Headers/QRoot.h</key>
 		<data>
 		23vqF8kxjBPdqeDbeO6ztrQ7zTU=
-		</data>
-		<key>HotItemCell.nib</key>
-		<data>
-		0UN7O/gY5Q7GxJI/TEj35IQoxrM=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -106,264 +26,70 @@
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		UI4cb8W1Ov4QvMxBNd7Vo0/vqfI=
+		o1R6PNSjeByp2LIw3/B+0kTEiOw=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		wS5SHeJ+4glZR8T7AqsDjyoIc9M=
+		EPrn15LEPZF5p5ocYUv0YgW7BlM=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		SDgY/qi8tNsUe44Q0RNagpPh6Gk=
+		+sSg1u71FMrIkGAR6mmrLhtjEic=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		wS5SHeJ+4glZR8T7AqsDjyoIc9M=
+		EPrn15LEPZF5p5ocYUv0YgW7BlM=
 		</data>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		fxsSSqQhIgZpVZbSG3J+4CA46wg=
+		ay1urF/7iBVhSqSI5RPyoim6Was=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		c8/peUOZEksUlCB8jbQWyvN3VIk=
 		</data>
-		<key>NormalFooter.bundle/en.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			hjUAn2WbNLIp+uOA6B5j32QWAck=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>NormalFooter.bundle/zh.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			pBdD0wO7FYu+Y7KEg8K6Y3Lnwd4=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>NormalHeader.bundle/en.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			eEV06/g64wlYWY/qSiykH1rTjjM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>NormalHeader.bundle/images/refresh_arrow@2x.png</key>
+		<key>Roobert-Bold.otf</key>
 		<data>
-		QAXOuzionWdZlBAgTLf2ac5HSpM=
+		xnxzpdSDyUZ6/yIrudpn9Vltk1Q=
 		</data>
-		<key>NormalHeader.bundle/images/refresh_arrow@3x.png</key>
+		<key>Roobert-Medium.otf</key>
 		<data>
-		QAXOuzionWdZlBAgTLf2ac5HSpM=
+		mfXMEBUUxSZVNjVGaRuwKB3GTnI=
 		</data>
-		<key>NormalHeader.bundle/zh.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			FeJjJZ7VYc1/qdZ9HCF/FkZ5LX4=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>QFindVC.nib</key>
+		<key>Roobert-Regular.otf</key>
 		<data>
-		CURvRDlTu3XKrMkq9tkhyGlf/ig=
+		cm0au72swMHItm8ktH4XUC7SZWE=
 		</data>
-		<key>QLoveVC.nib</key>
+		<key>contents.json</key>
 		<data>
-		IGfGrUgPKM5im2bM3WD3l9mc7oo=
+		TkAMQQwEi8xc9AECGrJ4cfOlt7c=
 		</data>
-		<key>QSetupVC.nib</key>
+		<key>hid@3x.png</key>
 		<data>
-		dDO46CNinoaQexszv1fa4d1Thq8=
+		EnHOA6UGxQ8TOAGiV2BgXRN2QI0=
 		</data>
-		<key>SeasonPlayerCell.nib</key>
-		<data>
-		6MA/A2LLLhwmjBa7rdYlMW4+xOE=
-		</data>
-		<key>StackItemView.nib</key>
-		<data>
-		ZOsOXnKBu3CADC/uXyb83oVhEmE=
-		</data>
-		<key>UserMessagingPlatformResources.bundle/Info.plist</key>
-		<data>
-		2vx93M24kLCcHjuNI1w5omvoUoU=
-		</data>
-		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>
-		<data>
-		k9OFlDPBRWfteJ+bfG12WAoBuls=
-		</data>
-		<key>en.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0wC//FpMF7NqGvbG0t5Bkn2NA6g=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>ActorItemCell.nib</key>
+		<key>1yu@3x.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eQcAfj+/0svJbv2OIrDw/WPrU08iBoCEUArh4jGA0BI=
+			wNQFrmrrY66fo6lEZ1GDOzXW77qwZ/Z+FP6I8owmVeg=
 			</data>
 		</dict>
-		<key>AdsNativeAd.nib</key>
+		<key>3jl@3x.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ltG0bnLAWvl/g0wfkaDjzOxoxSDKYsCBk7/doxml6T8=
+			utBZfCbxk2doTAc5oFiTz8WAkX39HIjhOID8JXRGzdw=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c4hEinI7Y0logJpQQ5WaLxVXbmDiMxLHtg9958tJm0o=
-			</data>
-		</dict>
-		<key>CastActionCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			NLWgB9QjMkVPT9Dic4/JHCrTHEmEJfqRFC4gVHYYZqI=
-			</data>
-		</dict>
-		<key>CastActionItemCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YYToCazMDuKYJbbXLsDuZf3LSypirTG+5aWNmSOd8tM=
-			</data>
-		</dict>
-		<key>CastDetailCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yGGv/uz8JsxcTK11LB9fZlXht7BHYuvkrcOLRjGptY4=
-			</data>
-		</dict>
-		<key>CastIntroCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xnd7yOxL216fv9LHzSTCxPUFpyg2RScBFBsrvAnTwJ8=
-			</data>
-		</dict>
-		<key>CastKnowForCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			a1bov3BpyAm6gIP7EIvRlEQSrNggwOoPGD68lH9NfOA=
-			</data>
-		</dict>
-		<key>ContinueCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1JDi2HVYF5kxr2S/YC9UXwkQb+OmfPrk067FqXZCbvY=
-			</data>
-		</dict>
-		<key>DataRateCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qyuFHQfUqj9J0ipD3eZ4w1+1bdu6eVYx71xWMjE7fiw=
-			</data>
-		</dict>
-		<key>DetailInforCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gEaNiOm8MDGm+5G3FzjAtkbOB1tC3qLtsHvCFz8wVsE=
-			</data>
-		</dict>
-		<key>DetailIntroduceCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			xVCbHVHuIzi708eFdQmEebW7ddHL0+CZG5fHC0gNcBI=
-			</data>
-		</dict>
-		<key>DetailListSesonCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			diqdNa8XLJDjrBhM96zTs5GndBhBmReUpunvHcwWY4Q=
-			</data>
-		</dict>
-		<key>DetailListSesonItemCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			b/nqlP8OzNIpHsiAC+Zh5L2sf8teIPAriKWBf6P3I4w=
-			</data>
-		</dict>
-		<key>DetailMoreLikeCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			2KrMvaku5LOJi0CDqLFG/Pfn39ehzbvTqMhQP7NVG9w=
-			</data>
-		</dict>
-		<key>DetailScenesCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			UEEqwwukgqYsbH5Wvr3LkFouEpSbo7YnvWvR1i/zgL0=
-			</data>
-		</dict>
-		<key>DetailSesonCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aCLXgQKBYVauXnttceVD31WoiGQeD9lEjiGzrEAuDmQ=
-			</data>
-		</dict>
-		<key>DetailSesonItemCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			w6+NEuF4jMwno3a1E40GI2vrst7c/eLnY/fH3/Jtids=
-			</data>
-		</dict>
-		<key>DetailTrailerCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			IYb3535wZKbNq0XeI8G+EzzItPpcnutsfg91RmhBQTM=
-			</data>
-		</dict>
-		<key>DetailTrailerItemCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vu1cyhDbh8p1ReRRCYN5VZsmKxnfEn/9ScmRmpT9snA=
-			</data>
-		</dict>
-		<key>GoogleMobileAdsResources.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			H+EGsZ5nuU5OkBlMBArniLllplwBp20FsNrBUaysyIc=
-			</data>
-		</dict>
-		<key>GoogleMobileAdsResources.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			afsRJYL8I/wGxjXJYdJio/e0tWVNKEeHSR3jAA2t+dI=
+			jvtjVPj/ITkr168AzrLbE727OwXQlJAOP1yaz8Lix/c=
 			</data>
 		</dict>
 		<key>Headers/QRoot.h</key>
@@ -373,46 +99,39 @@
 			DlEfjZqviO5uW5ct7ZpJNE2dYDZdkneS3V5iKFJvG6Y=
 			</data>
 		</dict>
-		<key>HotItemCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			k8lDdB7zv2fzyQbYqWQV7aNL2pM8a8tP0xo9GfiPIx8=
-			</data>
-		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GDerjtIRRB78POydH4HAWrc05OLLr3DlVzFWo8JPU4A=
+			z8qD3s5BXMU9vnwp/xxWfY779LMZbYUEeIdXuA3wp3M=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KgR+VsS6pRY5lWWGGuXRcaCs4QnxXEnLOUszdlYIlG8=
+			zOlHtHwXfL9uNVvNkm8uBYmfQu7l9d2mZHh5UukyIls=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jf42uvR2TNnYC2SCxlLNtC8tsYsaLF27I2ZtC51XYOU=
+			q4EjbqWbHN34okFqiReYGctIxTuojs65bY7WBUO7vcQ=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KgR+VsS6pRY5lWWGGuXRcaCs4QnxXEnLOUszdlYIlG8=
+			zOlHtHwXfL9uNVvNkm8uBYmfQu7l9d2mZHh5UukyIls=
 			</data>
 		</dict>
 		<key>Modules/QRoot.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4//Gen05XVPRvwVPsTlOuFa9LzbYWS9CraTF8wBYoeE=
+			wglVilaQtwMMKpqRJ3ehHnr7bqhZiJX2o1QrTN5paWs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -422,113 +141,40 @@
 			WjXfjx8J+ubnD3SqF9AeCpENgYa9z7gmUpKYr4OBMKs=
 			</data>
 		</dict>
-		<key>NormalFooter.bundle/en.lproj/Localizable.strings</key>
+		<key>Roobert-Bold.otf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hTN0XqizNlXFXA4AabffmiJevDZsRVw5/zYuiQtGysw=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>NormalFooter.bundle/zh.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/Ao3GwWBCivqqJcykjUh+EWmQx5Qe3KU2kUt45b5tbo=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>NormalHeader.bundle/en.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			IgnmzFx9DLJgKCG8EoUi+AzyY+MSuEGhnKfPKYwO+LQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>NormalHeader.bundle/images/refresh_arrow@2x.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			i0Pg5Zh7rY3JQTQgPTHczFq18az8k2zzMxpigDN+HT8=
+			yX0Z+3XUBRszGIga98I6iaW5Vl1jwKpYT/9nhjEbq6g=
 			</data>
 		</dict>
-		<key>NormalHeader.bundle/images/refresh_arrow@3x.png</key>
+		<key>Roobert-Medium.otf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i0Pg5Zh7rY3JQTQgPTHczFq18az8k2zzMxpigDN+HT8=
+			l+DD5wFfX+Ic+qFWf+JwSBtPnyxnHia9v3PhcNfvPHI=
 			</data>
 		</dict>
-		<key>NormalHeader.bundle/zh.lproj/Localizable.strings</key>
+		<key>Roobert-Regular.otf</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oBTC6lOLDMCmJ+tGp+KcxadAs8y4GifSeQ01mP8F2t0=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>QFindVC.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			FL5Ig5Iuk37AnGbIk3aeEGRVKYMIgJn6VUwbbUK6tEc=
+			fj7mrQWoLMdKIEuXIlLUtZ/fP5i6jjW0BSU43NfRpXQ=
 			</data>
 		</dict>
-		<key>QLoveVC.nib</key>
+		<key>contents.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O01CfrxEw/bYYMQiC/X/he58ywd9f/LVBQczfzT5bbo=
+			OZgqw8H+PXMyWjIO5TnRIGjBE9uiYxA3X4mjRciaX1M=
 			</data>
 		</dict>
-		<key>QSetupVC.nib</key>
+		<key>hid@3x.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t0HHBpz1WcwIGdvoOEIVdQQXKcjOshzzfteDTMxHPEM=
+			sN6txns4lA6hFFbDsQwVReLyFXLsR1hhIQ+oJH5nTqw=
 			</data>
-		</dict>
-		<key>SeasonPlayerCell.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			rRd+3bhpom4aDTKBhXfutjYeeDhwdJbklrLNt0WT5ws=
-			</data>
-		</dict>
-		<key>StackItemView.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lxNjj0uOzRNDa7+gaby5MhHmk4rupzXAtH4SP1xP8j0=
-			</data>
-		</dict>
-		<key>UserMessagingPlatformResources.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			kmAfYr8okFJp2rbw3Q9M7Wvhy7MTcOD4ciZvcI2GNpM=
-			</data>
-		</dict>
-		<key>UserMessagingPlatformResources.bundle/PrivacyInfo.xcprivacy</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			RbetuZ/NLZYqHIAPv8wTJbV6f6QWX0FhgjI7tf/pyQA=
-			</data>
-		</dict>
-		<key>en.lproj/Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7SduouMs7tJc3XhyzeR2Vu0VF0WlALaxQy7jtutsjy0=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>
