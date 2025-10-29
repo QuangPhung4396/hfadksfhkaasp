@@ -13,11 +13,6 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, '15.0'
   spec.swift_version = '5.0'
 
-  pod 'KRProgressHUD'
-  pod 'Toast-Swift', '~> 5.0.1'
-  pod 'SDWebImage'
-  pod 'SnapKit'
-
   spec.dependency 'KRProgressHUD'
   spec.dependency 'Toast-Swift'
   spec.dependency 'SDWebImage'
